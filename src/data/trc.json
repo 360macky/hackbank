@@ -1,0 +1,63 @@
+[
+  {
+    "inputBank": "IBK",
+    "inputBankName": "Interbank",
+    "outputBank": "SCO",
+    "outputBankName": "Scotiabank",
+    "restrictAmounts": [],
+    "restrictDate": {
+      "days": "",
+      "hours": [
+        {
+          "start": "0:00",
+          "end": "04:30"
+        },
+        {
+          "start": "15:35",
+          "end": "16:05"
+        },
+        {
+          "start": "21:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "restrictDouble": []
+  },
+  {
+    "inputBank": "IBK",
+    "inputBankName": "Interbank",
+    "outputBank": "BCP",
+    "outputBankName": "BCP",
+    "restrictAmounts": [
+
+    ],
+    "restrictDate": {
+      "days": "BUSINESS",
+      "hours": [
+        {
+          "start": "01:00",
+          "end": "02:00"
+        }
+      ]
+    },
+    "restrictDouble": []
+  },
+  {
+    "inputBank": "IBK",
+    "inputBankName": "Interbank",
+    "outputBank": "BBV",
+    "outputBankName": "BBVA",
+    "restrictAmounts": [],
+    "restrictDate": {
+      "days": "BUSINESS",
+      "hours": [
+        {
+          "start": "09:40",
+          "end": "10:00"
+        }
+      ]
+    },
+    "restrictDouble": []
+  }
+]
