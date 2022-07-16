@@ -2,42 +2,34 @@
   {
     "inputBank": "IBK",
     "inputBankName": "Interbank",
+    "inputBankAccountType": "Cuenta Simple",
     "outputBank": "SCO",
     "outputBankName": "Scotiabank",
-    "restrictAmounts": [],
-    "restrictDate": {
-      "days": "",
-      "hours": [
-        {
-          "start": "0:00",
-          "end": "04:30"
-        },
-        {
-          "start": "15:35",
-          "end": "16:05"
-        },
-        {
-          "start": "21:00",
-          "end": "00:00"
-        }
-      ]
-    },
-    "restrictDouble": []
-  },
-  {
-    "inputBank": "IBK",
-    "inputBankName": "Interbank",
-    "outputBank": "BCP",
-    "outputBankName": "BCP",
+    "outputBankAccountType": "Cuenta Free",
     "restrictAmounts": [
-
+      {
+        "type": "maximum",
+        "amount": "60000",
+        "currency": "PEN"
+      }
     ],
     "restrictDate": {
       "days": "BUSINESS",
       "hours": [
         {
-          "start": "01:00",
-          "end": "02:00"
+          "start": "0:00",
+          "end": "04:30",
+          "type": "deferred_cut"
+        },
+        {
+          "start": "15:35",
+          "end": "16:05",
+          "type": "deferred_cut"
+        },
+        {
+          "start": "20:00",
+          "end": "23:59",
+          "type": "deferred_cut"
         }
       ]
     },
@@ -46,8 +38,30 @@
   {
     "inputBank": "IBK",
     "inputBankName": "Interbank",
+    "inputBankAccountType": "Cuenta Simple",
+    "outputBank": "BCP",
+    "outputBankName": "BCP",
+    "outputBankAccountType": "Cuenta Digital",
+    "restrictAmounts": [],
+    "restrictDate": {
+      "days": "BUSINESS",
+      "hours": [
+        {
+          "start": "01:00",
+          "end": "02:00",
+          "type": "deferred_cut"
+        }
+      ]
+    },
+    "restrictDouble": []
+  },
+  {
+    "inputBank": "IBK",
+    "inputBankName": "Interbank",
+    "inputBankAccountType": "Cuenta Simple",
     "outputBank": "BBV",
     "outputBankName": "BBVA",
+    "outputBankAccountType": "Cuenta Independencia",
     "restrictAmounts": [],
     "restrictDate": {
       "days": "BUSINESS",
@@ -58,6 +72,236 @@
         }
       ]
     },
+    "restrictDouble": []
+  },
+  {
+    "inputBank": "SCO",
+    "inputBankName": "Scotiabank",
+    "inputBankAccountType": "Cuenta Free",
+    "outputBank": "IBK",
+    "outputBankName": "Interbank",
+    "outputBankAccountType": "Cuenta Simple",
+    "restrictAmounts": [
+      {
+        "type": "maximum",
+        "amount": "30000",
+        "currency": "PEN"
+      }
+    ],
+    "restrictDate": {
+      "hours": [
+        {
+          "start": "15:30",
+          "end": "16:59"
+        }
+      ]
+    },
+    "restrictDouble": []
+  },
+  {
+    "inputBank": "SCO",
+    "inputBankName": "Scotiabank",
+    "inputBankAccountType": "Cuenta Free",
+    "outputBank": "BCP",
+    "outputBankName": "BCP",
+    "outputBankAccountType": "Cuenta Digital",
+    "restrictAmounts": [
+      {
+        "type": "maximum",
+        "amount": "30000",
+        "currency": "PEN"
+      }
+    ],
+    "restrictDate": {
+      "hours": [
+        {
+          "start": "15:30",
+          "end": "16:05"
+        }
+      ]
+    },
+    "restrictDouble": []
+  },
+  {
+    "inputBank": "SCO",
+    "inputBankName": "Scotiabank",
+    "inputBankAccountType": "Cuenta Free",
+    "outputBank": "BBV",
+    "outputBankName": "BBVA",
+    "outputBankAccountType": "Cuenta Independencia",
+    "restrictAmounts": [
+      {
+        "type": "maximum",
+        "amount": "30000",
+        "currency": "PEN"
+      }
+    ],
+    "restrictDate": {
+      "hours": [
+        {
+          "start": "15:30",
+          "end": "16:05"
+        }
+      ]
+    },
+    "restrictDouble": []
+  },
+  {
+    "inputBank": "BCP",
+    "inputBankName": "BCP",
+    "inputBankAccountType": "Cuenta Digital",
+    "outputBank": "IBK",
+    "outputBankName": "Interbank",
+    "outputBankAccountType": "Cuenta Simple",
+    "restrictAmounts": [
+      {
+        "type": "commission",
+        "amount": "500",
+        "commission": 4.8,
+        "currency": "PEN",
+        "description": "Aplica un recargo de S/4.8 cuando supera los S/500."
+      },
+      {
+        "type": "maximum",
+        "amount": "14100",
+        "currency": "PEN"
+      }
+    ],
+    "restrictDate": {
+      "hours": [
+        {
+          "start": "15:30",
+          "end": "16:05"
+        }
+      ]
+    },
+    "restrictDouble": []
+  },
+  {
+    "inputBank": "BCP",
+    "inputBankName": "BCP",
+    "inputBankAccountType": "Cuenta Digital",
+    "outputBank": "SCO",
+    "outputBankName": "Scotiabank",
+    "outputBankAccountType": "Cuenta Free",
+    "restrictAmounts": [
+      {
+        "type": "maximum",
+        "amount": "14100",
+        "currency": "PEN"
+      }
+    ],
+    "restrictDate": {
+      "hours": [
+        {
+          "start": "15:30",
+          "end": "16:05"
+        }
+      ]
+    },
+    "restrictDouble": []
+  },
+  {
+    "inputBank": "BCP",
+    "inputBankName": "BCP",
+    "inputBankAccountType": "Cuenta Digital",
+    "outputBank": "BBV",
+    "outputBankName": "BBVA",
+    "outputBankAccountType": "Cuenta Independencia",
+    "restrictAmounts": [
+      {
+        "type": "commission",
+        "amount": "500",
+        "commission": 4.8,
+        "currency": "PEN",
+        "description": "Aplica un recargo de S/4.8 cuando supera los S/500."
+      },
+      {
+        "type": "maximum",
+        "amount": "14100",
+        "currency": "PEN"
+      }
+    ],
+    "restrictDate": {
+      "hours": [
+        {
+          "start": "15:30",
+          "end": "16:05"
+        }
+      ]
+    },
+    "restrictDouble": []
+  },
+  {
+    "inputBank": "BBV",
+    "inputBankName": "BBVA",
+    "inputBankAccountType": "Cuenta Independencia",
+    "outputBank": "IBK",
+    "outputBankName": "Interbank",
+    "outputBankAccountType": "Cuenta Simple",
+    "restrictAmounts": [
+      {
+        "type": "commission",
+        "amount": "0",
+        "commission": 5.8,
+        "currency": "PEN",
+        "description": "Aplica un recargo de S/5.8"
+      },
+      {
+        "type": "maximum",
+        "amount": "700",
+        "currency": "PEN"
+      }
+    ],
+    "restrictDate": null,
+    "restrictDouble": []
+  },
+  {
+    "inputBank": "BBV",
+    "inputBankName": "BBVA",
+    "inputBankAccountType": "Cuenta Independencia",
+    "outputBank": "SCO",
+    "outputBankName": "Scotiabank",
+    "outputBankAccountType": "Cuenta Free",
+    "restrictAmounts": [
+      {
+        "type": "commission",
+        "amount": "0",
+        "commission": 5.8,
+        "currency": "PEN",
+        "description": "Aplica un recargo de S/5.8"
+      },
+      {
+        "type": "maximum",
+        "amount": "700",
+        "currency": "PEN"
+      }
+    ],
+    "restrictDate": null,
+    "restrictDouble": []
+  },
+  {
+    "inputBank": "BBV",
+    "inputBankName": "BBVA",
+    "inputBankAccountType": "Cuenta Independencia",
+    "outputBank": "BCP",
+    "outputBankName": "BCP",
+    "outputBankAccountType": "Cuenta Digital",
+    "restrictAmounts": [
+      {
+        "type": "commission",
+        "amount": "0",
+        "commission": 5.8,
+        "currency": "PEN",
+        "description": "Aplica un recargo de S/5.8"
+      },
+      {
+        "type": "maximum",
+        "amount": "700",
+        "currency": "PEN"
+      }
+    ],
+    "restrictDate": null,
     "restrictDouble": []
   }
 ]
