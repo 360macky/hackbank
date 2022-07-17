@@ -9,7 +9,7 @@
     "restrictAmounts": [
       {
         "type": "maximum",
-        "amount": "60000",
+        "amount": "10000",
         "currency": "PEN"
       }
     ],
@@ -42,7 +42,13 @@
     "outputBank": "BCP",
     "outputBankName": "BCP",
     "outputBankAccountType": "Cuenta Digital",
-    "restrictAmounts": [],
+    "restrictAmounts": [
+      {
+        "type": "maximum",
+        "amount": "10000",
+        "currency": "PEN"
+      }
+    ],
     "restrictDate": {
       "days": "BUSINESS",
       "hours": [
@@ -62,7 +68,13 @@
     "outputBank": "BBV",
     "outputBankName": "BBVA",
     "outputBankAccountType": "Cuenta Independencia",
-    "restrictAmounts": [],
+    "restrictAmounts": [
+      {
+        "type": "maximum",
+        "amount": "10000",
+        "currency": "PEN"
+      }
+    ],
     "restrictDate": {
       "days": "BUSINESS",
       "hours": [
