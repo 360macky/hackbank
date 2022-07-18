@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "hackbank",
-    "slug": "hackbank",
+    "name": "Hackbank",
+    "slug": "Hackbank",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
