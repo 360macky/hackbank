@@ -28,7 +28,6 @@ function Form({ navigation }) {
   const [appIsReady, setAppIsReady] = useState(false);
 
   useEffect(() => {
-    // Keep the splash screen visible while loading fonts.
     async function prepare() {
       try {
         await SplashScreen.preventAutoHideAsync();
