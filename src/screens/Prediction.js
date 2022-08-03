@@ -146,7 +146,7 @@ function Prediction({ route, navigation }) {
               }`,
             };
             localPredictionList.push(currentPrediction);
-            outputAmount = outputAmount + restriction.commission;
+            outputAmount = outputAmount - restriction.commission;
           }
         }
       }
