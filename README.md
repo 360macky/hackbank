@@ -6,13 +6,33 @@
     alt="Hackbank"
     title="Hackbank"
   />
-  <h1 align="center">Hackbank</h1>
+  <h1 align="center">💵 Hackbank 📲</h1>
 </p>
 
 <p align="center">
     Bank-to-Bank Transaction Calculator (for Peru)
 </p>
 
+
+## 🛠 Development
+Hackbank is developed in React Native with Expo.
+Linting is used with **ESLint**.
+
+It consists of three screens (`src/screens`):
+* **Form**: User can fill in the data about a transaction.
+* **Result**: User can review the prediction of commissions (and other elements) on the transaction.
+* **About**: Information about the application, version, tutorials, etc.
+
+The operation of the prediction consists of the automatic review of a JSON file called **Transfer Restriction Calculator** (**TRC** from now on).
+
+This `TRC.json` file contains the rules by which the data of a transaction is evaluated.
+
+### Example of operation
+**ABC** bank provides a commission of `50` when the amount exceeds more than `500`.
+
+So TRC has an object that contains information about that rule, and it warns that if it passes more than `50`, the commission will be applied.
+
+If the user calculates that the source bank is ABC, and the destination bank is DEF, and the amount is `1000`. When calculating the result, the TRC is checked, and since there is this condition that ABC provides a condition of `50` when the amount exceeds more than `500`, **Hackbank** will inform the user of a commission.
 
 ## 📦 Deployment
 To publish the Hackbank application required a Google and Apple developer account. To make the build I used EAS (Expo Application Services).
