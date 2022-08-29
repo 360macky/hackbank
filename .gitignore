@@ -65,6 +65,7 @@ gradle-app.setting
 !gradle-wrapper.properties
 
 # Cache of project
+*.cache
 .gradletasknamecache
 
 # Eclipse Gradle plugin generated files
