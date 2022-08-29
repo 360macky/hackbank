@@ -261,6 +261,9 @@ misc.xml
 deploymentTargetDropDown.xml
 render.experimental.xml
 
+# Credentials
+credentials.json
+
 # Keystore files
 *.jks
 *.keystore
