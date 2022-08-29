@@ -8,7 +8,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "build:web": "expo build:web"
+    "predeploy": "expo build:web",
+    "deploy-hosting": "yarn run predeploy && firebase deploy --only hosting"
   },
   "dependencies": {
     "@expo-google-fonts/inter": "^0.2.2",
@@ -16,7 +17,7 @@
     "@react-native-picker/picker": "2.4.0",
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/native-stack": "^6.6.2",
-    "eslint": "^8.17.0",
+    "eslint": "^8.23.0",
     "expo": "~45.0.0",
     "expo-font": "~10.1.0",
     "expo-linking": "~3.1.0",
