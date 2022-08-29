@@ -276,3 +276,6 @@ google-services.json
 
 # Google Service Account
 pc-api*.json
+
+# Web Build Folder
+web-build/
