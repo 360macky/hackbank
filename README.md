@@ -28,6 +28,33 @@ The operation of the prediction consists of the automatic review of a JSON file 
 
 This `TRC.json` file contains the rules by which the data of a transaction is evaluated.
 
+```json
+[
+  {
+    "inputBank": "IBK",
+    "inputBankName": "Interbank",
+    "inputBankAccountType": "Cuenta Simple",
+    "outputBank": "SCO",
+    "outputBankName": "Scotiabank",
+    "outputBankAccountType": "Cuenta Free",
+    "restrictAmounts": [
+      {
+        "type": "maximum",
+        "amount": "10000",
+        "currency": "PEN"
+      }
+    ],
+    "restrictDate": {
+      "days": "BUSINESS",
+      "hours": [
+        {
+          "start": "0:00",
+          "end": "04:30",
+          "type": "deferred_cut"
+        },
+...
+```
+
 ### Example of operation
 
 **ABC** bank provides a commission of `50` when the amount exceeds more than `500`.
