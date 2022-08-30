@@ -239,6 +239,8 @@ function Form({ navigation }) {
               placeholder="S/ 000.00"
               textAlign={'right'}
               placeholderTextColor="#CFE8D9"
+              accessible
+              accesibilityLabel="Ingresar monto de dinero"
             />
             <View style={styles.formArrowContainer}>
               <ArrowForm width={103} />
@@ -328,7 +330,10 @@ function Form({ navigation }) {
                 navigation.navigate('Acerca de');
               }}
             >
-              <View style={styles.exploreButton}>
+              <View
+                style={styles.exploreButton}
+                accessibilityLabel="Acerca de Hackbank"
+              >
                 <Explore width={68} height={68} />
               </View>
             </Pressable>
