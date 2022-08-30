@@ -2,7 +2,6 @@ import * as React from 'react';
 import { useState, useEffect, useCallback } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import {
-  Alert,
   StyleSheet,
   Text,
   View,
@@ -11,15 +10,17 @@ import {
   ScrollView,
   Platform,
 } from 'react-native';
-import FormLogo from '../../assets/FormLogo';
-import ArrowForm from '../../assets/ArrowForm';
-import Explore from '../../assets/Explore';
 import SelectDropdown from 'react-native-select-dropdown';
 import { RobotoMono_400Regular } from '@expo-google-fonts/roboto-mono';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
 import { Picker } from '@react-native-picker/picker';
 import PropTypes from 'prop-types';
+
+import FormLogo from '../../assets/FormLogo';
+import ArrowForm from '../../assets/ArrowForm';
+import Explore from '../../assets/Explore';
+import showAlert from '../utils/showAlert';
 
 function Form({ navigation }) {
   const [inputBank, setInputBank] = useState('');
@@ -122,22 +123,22 @@ function Form({ navigation }) {
     };
 
     if (inputBank === '') {
-      Alert.alert(
+      showAlert(
         VALIDATE_INPUT_MESSAGES.INPUT_BANK_EMPTY.title,
         VALIDATE_INPUT_MESSAGES.INPUT_BANK_EMPTY.description
       );
     } else if (outputBank === '') {
-      Alert.alert(
+      showAlert(
         VALIDATE_INPUT_MESSAGES.OUTPUT_BANK_EMPTY.title,
         VALIDATE_INPUT_MESSAGES.OUTPUT_BANK_EMPTY.description
       );
     } else if (inputAmount === '') {
-      Alert.alert(
+      showAlert(
         VALIDATE_INPUT_MESSAGES.INPUT_AMOUNT_EMPTY.title,
         VALIDATE_INPUT_MESSAGES.INPUT_AMOUNT_EMPTY.description
       );
     } else if (inputBank === outputBank) {
-      Alert.alert(
+      showAlert(
         VALIDATE_INPUT_MESSAGES.SAME_BANKS.title,
         VALIDATE_INPUT_MESSAGES.SAME_BANKS.description
       );
@@ -215,6 +216,7 @@ function Form({ navigation }) {
                     color: '#006C4B',
                     fontFamily: 'RobotoMono_400Regular',
                     textAlign: 'center',
+                    border: 0,
                   }}
                 >
                   <Picker.Item label="Banco de origen" value={''} />
@@ -291,6 +293,7 @@ function Form({ navigation }) {
                     color: '#006C4B',
                     fontFamily: 'RobotoMono_400Regular',
                     textAlign: 'center',
+                    border: 0,
                   }}
                 >
                   <Picker.Item label="Banco de destino" value={''} />
@@ -361,6 +364,7 @@ const styles = StyleSheet.create({
     margin: 20,
     borderRadius: 25,
     width: '80%',
+    maxWidth: '460px',
   },
   formLogo: {
     width: 44,
