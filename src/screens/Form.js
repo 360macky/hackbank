@@ -22,6 +22,8 @@ import ArrowForm from '../../assets/ArrowForm';
 import Explore from '../../assets/Explore';
 import showAlert from '../utils/showAlert';
 
+import { color } from '../ui';
+
 function Form({ navigation }) {
   const [inputBank, setInputBank] = useState('');
   const [outputBank, setOutputBank] = useState('');
@@ -152,10 +154,10 @@ function Form({ navigation }) {
   }
 
   return (
-    <View style={{ flex: 1, backgroundColor: '#006C4B' }}>
+    <View style={{ flex: 1, backgroundColor: color.primary }}>
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <SafeAreaView
-          style={[styles.container, { backgroundColor: '#006C4B' }]}
+          style={[styles.container, { backgroundColor: color.primary }]}
           onLayout={onLayoutRootView}
         >
           <FormLogo width={44} height={65.6} />
@@ -184,7 +186,7 @@ function Form({ navigation }) {
                 buttonTextStyle={{
                   fontSize: 16,
                   fontFamily: 'RobotoMono_400Regular',
-                  color: '#006C4B',
+                  color: color.primary,
                 }}
                 dropdownStyle={{
                   backgroundColor: '#ffffff',
@@ -195,7 +197,7 @@ function Form({ navigation }) {
                   fontFamily: 'RobotoMono_400Regular',
                 }}
                 selectedRowTextStyle={{
-                  color: '#006C4B',
+                  color: color.primary,
                 }}
               />
             ) : (
@@ -213,7 +215,7 @@ function Form({ navigation }) {
                     handleBankInput({ value: itemValue });
                   }}
                   style={{
-                    color: '#006C4B',
+                    color: color.primary,
                     fontFamily: 'RobotoMono_400Regular',
                     textAlign: 'center',
                     border: 0,
@@ -238,7 +240,7 @@ function Form({ navigation }) {
               keyboardType="numeric"
               placeholder="S/ 000.00"
               textAlign={'right'}
-              placeholderTextColor="#CFE8D9"
+              placeholderTextColor={color.greenlight}
               accessible
               accesibilityLabel="Ingresar monto de dinero"
             />
@@ -263,7 +265,7 @@ function Form({ navigation }) {
                 buttonTextStyle={{
                   fontSize: 16,
                   fontFamily: 'RobotoMono_400Regular',
-                  color: '#006C4B',
+                  color: color.primary,
                 }}
                 dropdownStyle={{
                   backgroundColor: '#ffffff',
@@ -274,7 +276,7 @@ function Form({ navigation }) {
                   fontFamily: 'RobotoMono_400Regular',
                 }}
                 selectedRowTextStyle={{
-                  color: '#006C4B',
+                  color: color.primary,
                 }}
               />
             ) : (
@@ -292,7 +294,7 @@ function Form({ navigation }) {
                     handleBankOutput({ value: itemValue });
                   }}
                   style={{
-                    color: '#006C4B',
+                    color: color.primary,
                     fontFamily: 'RobotoMono_400Regular',
                     textAlign: 'center',
                     border: 0,
@@ -316,7 +318,7 @@ function Form({ navigation }) {
               accesibilityLabel="Predecir"
               style={({ pressed }) => [
                 styles.predictButton,
-                { backgroundColor: pressed ? '#00442F' : '#006C4B' },
+                { backgroundColor: pressed ? '#00442F' : color.primary },
               ]}
             >
               <Text style={styles.predictButtonText}>Predecir</Text>
@@ -350,7 +352,7 @@ Form.propTypes = {
 
 const styles = StyleSheet.create({
   scrollViewContainer: {
-    backgroundColor: '#006C4B',
+    backgroundColor: color.primary,
   },
   helloText: {
     textAlign: 'center',
@@ -359,12 +361,12 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: '#CFE8D9',
+    backgroundColor: color.greenlight,
     justifyContent: 'center',
     alignItems: 'center',
   },
   formContainer: {
-    backgroundColor: '#CFE8D9',
+    backgroundColor: color.greenlight,
     padding: 20,
     margin: 20,
     borderRadius: 25,
@@ -382,7 +384,7 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
   },
   currentDate: {
-    backgroundColor: '#4D6358',
+    backgroundColor: color.greendark,
     borderRadius: 19,
     paddingLeft: 39,
     paddingRight: 39,
