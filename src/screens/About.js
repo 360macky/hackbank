@@ -8,13 +8,15 @@ import {
   Pressable,
   ScrollView,
   Alert,
+  Platform,
 } from 'react-native';
-import FormLogo from '../../assets/FormLogo';
 import { RobotoMono_400Regular } from '@expo-google-fonts/roboto-mono';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
 import PropTypes from 'prop-types';
 import * as Linking from 'expo-linking';
+
+import FormLogo from '../../assets/FormLogo';
 
 function About({ navigation }) {
   const [appIsReady, setAppIsReady] = useState(false);
@@ -44,19 +46,27 @@ function About({ navigation }) {
   }
 
   const handleURL = async (url, type) => {
-    // Checking if the link is supported for links with custom URL scheme.
-    const supported = await Linking.canOpenURL(
-      type === 'email' ? `mailto:${url}` : url
-    );
-
-    if (supported) {
-      // Opening the link with some app, if the URL scheme is "http" the web link should be opened
-      // by some browser in the mobile
-      await Linking.openURL(type === 'email' ? `mailto:${url}` : url);
+    if (Platform.OS === 'web') {
+      if (type === 'email') {
+        location.href = `mailto:${url}`;
+      } else {
+        window.open(url, '_blank');
+      }
     } else {
-      Alert.alert(
-        `El ${type === 'email' ? 'correo' : 'enlace'} es el siguiente: ${url}`
+      // Checking if the link is supported for links with custom URL scheme.
+      const supported = await Linking.canOpenURL(
+        type === 'email' ? `mailto:${url}` : url
       );
+
+      if (supported) {
+        // Opening the link with some app, if the URL scheme is "http" the web link should be opened
+        // by some browser in the mobile
+        await Linking.openURL(type === 'email' ? `mailto:${url}` : url);
+      } else {
+        Alert.alert(
+          `El ${type === 'email' ? 'correo' : 'enlace'} es el siguiente: ${url}`
+        );
+      }
     }
   };
 
@@ -173,6 +183,7 @@ const styles = StyleSheet.create({
     margin: 20,
     borderRadius: 25,
     width: '80%',
+    maxWidth: '460px',
   },
   secondaryButton: {
     marginTop: 8,
