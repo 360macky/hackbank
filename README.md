@@ -13,6 +13,12 @@
     Bank-to-Bank Transaction Calculator (for Peru)
 </p>
 
+<p align="center">
+    <a href="https://web.hackbank.app">💻 Web App</a> -
+    <a href="https://play.google.com/store/apps/details?id=io.hackbank.app">🤖 Install on Android</a> -
+    <a href="https://apps.apple.com/us/app/hackbank/id1635247314">🍎 Install on iOS</a>
+</p>
+
 ## 🛠 Development
 
 Hackbank is developed in React Native with Expo.
