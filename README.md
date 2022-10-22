@@ -75,7 +75,7 @@ If the user calculates that the source bank is ABC, and the destination bank is 
 
 To publish Hackbank, a Google and Apple developer account is required. To make the build I used EAS (Expo Application Services).
 
-## 💻 For Web
+### 💻 For Web
 
 To publish in web I'm using Firebase Hosting. The following commands are used to deploy:
 
