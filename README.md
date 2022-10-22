@@ -21,7 +21,8 @@
 
 ## 🛠 Development
 
-Hackbank is developed in React Native with Expo.
+Hackbank is developed in [React Native](https://reactnative.dev) with [Expo](https://expo.dev).
+
 Linting is used with **ESLint**.
 
 It consists of three screens (`src/screens`):
@@ -77,7 +78,7 @@ To publish Hackbank, a Google and Apple developer account is required. To make t
 
 ### 💻 For Web
 
-To publish in web I'm using Firebase Hosting. The following commands are used to deploy:
+To publish in web I'm using [Firebase Hosting](https://firebase.google.com/docs/hosting). The following commands are used to deploy:
 
 ```json
   "predeploy": "expo build:web",
