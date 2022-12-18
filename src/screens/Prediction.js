@@ -302,6 +302,7 @@ const styles = StyleSheet.create({
     margin: 20,
     borderRadius: 25,
     width: '80%',
+    maxWidth: '460px',
   },
   inputResultContainer: {
     backgroundColor: '#FFFFFF',
