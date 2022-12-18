@@ -40,6 +40,7 @@ Temporary Items
 # React Native Stack Base
 
 .expo
+.expo-shared
 __generated__
 
 ### ReactNative.Xcode Stack ###
