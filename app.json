@@ -2,7 +2,8 @@
   "expo": {
     "name": "Hackbank",
     "slug": "Hackbank",
-    "version": "1.0.2",
+    "description": "An app that allows you to simulate an interbank transfer.",
+    "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
