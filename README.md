@@ -19,6 +19,14 @@
     <a href="https://apps.apple.com/us/app/hackbank/id1635247314">🍎 Install on iOS</a>
 </p>
 
+<p align="center">
+  <img
+    src=".github/preview.png"
+    align="center"
+    width="400"
+    alt="Hackbank"
+    title="Hackbank"
+  />
 
 ## 📖 Concept
 
