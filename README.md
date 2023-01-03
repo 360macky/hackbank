@@ -19,6 +19,11 @@
     <a href="https://apps.apple.com/us/app/hackbank/id1635247314">🍎 Install on iOS</a>
 </p>
 
+
+## 📖 Concept
+
+**Hackbank** is a mobile application that allows you to calculate the commissions and delays of a bank-to-bank transaction. It is designed for the Peruvian market. And it is available for Android, iOS and Web.
+
 ## 🛠 Development
 
 Hackbank is developed in [React Native](https://reactnative.dev) with [Expo](https://expo.dev).
