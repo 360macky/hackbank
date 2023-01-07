@@ -27,6 +27,13 @@
     alt="Hackbank"
     title="Hackbank"
   />
+</p>
+
+
+<p align="center">
+  ✅ This project has diagrams to help you understand how it works! 📌
+</p>
+
 
 ## 📖 Concept
 
@@ -43,6 +50,17 @@ It consists of three screens (`src/screens`):
 - **Form**: User can fill in the data about a transaction.
 - **Result**: User can review the prediction of commissions (and other elements) on the transaction.
 - **About**: Information about the application, version, tutorials, etc.
+
+### 🤖 Operation
+
+```mermaid
+graph TD
+    A[Hackbank Calculation Workflow] -->|Fill bank and transaction amount| B(Hackbank Calculator)
+    B --> C[Identify Bank2Bank correlation]
+    C --> D[Verify restrict amounts]
+    D --> E[Verify restrict date]
+    E --> F[Obtain all the restrictions and sent to user]
+```
 
 The operation of the prediction consists of the automatic review of a JSON file called **Transfer Restriction Calculator** (**TRC** from now on).
 
@@ -75,7 +93,7 @@ This `TRC.json` file contains the rules by which the data of a transaction is ev
 ...
 ```
 
-### Example of operation
+### 📌 Example of operation
 
 **ABC** bank provides a commission of `50` when the amount exceeds more than `500`.
 
