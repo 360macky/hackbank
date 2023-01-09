@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-    Bank-to-Bank Transaction Calculator (for Peru)
+  Bank-to-Bank Transaction Calculator Multiplaform App (for Peru)
 </p>
 
 <p align="center">
