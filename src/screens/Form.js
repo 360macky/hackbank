@@ -154,10 +154,10 @@ function Form({ navigation }) {
   }
 
   return (
-    <View style={{ flex: 1, backgroundColor: color.primary }}>
+    <View style={{ flex: 1, backgroundColor: color.dark }}>
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <SafeAreaView
-          style={[styles.container, { backgroundColor: color.primary }]}
+          style={[styles.container, { backgroundColor: color.dark }]}
           onLayout={onLayoutRootView}
         >
           <FormLogo width={44} height={65.6} />
@@ -179,25 +179,26 @@ function Form({ navigation }) {
                 }}
                 defaultButtonText="Banco de origen"
                 buttonStyle={{
-                  backgroundColor: '#ffffff',
+                  backgroundColor: color.primary,
                   width: '100%',
                   borderRadius: 13,
                 }}
                 buttonTextStyle={{
                   fontSize: 16,
                   fontFamily: 'RobotoMono_400Regular',
-                  color: color.primary,
+                  color: '#ffffff',
                 }}
                 dropdownStyle={{
-                  backgroundColor: '#ffffff',
+                  backgroundColor: color.primary,
                   borderRadius: 13,
                 }}
                 rowTextStyle={{
                   fontSize: 16,
                   fontFamily: 'RobotoMono_400Regular',
+                  color: '#ffffff',
                 }}
                 selectedRowTextStyle={{
-                  color: color.primary,
+                  color: color.greenlight,
                 }}
               />
             ) : (
@@ -240,7 +241,7 @@ function Form({ navigation }) {
               keyboardType="numeric"
               placeholder="S/ 000.00"
               textAlign={'right'}
-              placeholderTextColor={color.greenlight}
+              placeholderTextColor={'#CFE8D9'}
               accessible
               accesibilityLabel="Ingresar monto de dinero"
             />
@@ -258,25 +259,26 @@ function Form({ navigation }) {
                 }}
                 defaultButtonText="Banco de destino"
                 buttonStyle={{
-                  backgroundColor: '#ffffff',
+                  backgroundColor: color.primary,
                   width: '100%',
                   borderRadius: 13,
                 }}
                 buttonTextStyle={{
                   fontSize: 16,
                   fontFamily: 'RobotoMono_400Regular',
-                  color: color.primary,
+                  color: '#ffffff',
                 }}
                 dropdownStyle={{
-                  backgroundColor: '#ffffff',
+                  backgroundColor: color.primary,
                   borderRadius: 13,
                 }}
                 rowTextStyle={{
                   fontSize: 16,
                   fontFamily: 'RobotoMono_400Regular',
+                  color: '#ffffff',
                 }}
                 selectedRowTextStyle={{
-                  color: color.primary,
+                  color: color.greenlight,
                 }}
               />
             ) : (
@@ -318,7 +320,7 @@ function Form({ navigation }) {
               accesibilityLabel="Predecir"
               style={({ pressed }) => [
                 styles.predictButton,
-                { backgroundColor: pressed ? '#00442F' : color.primary },
+                { backgroundColor: pressed ? '#CFE8D9' : '#FFFFFF' },
               ]}
             >
               <Text style={styles.predictButtonText}>Predecir</Text>
@@ -358,6 +360,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 8,
     fontSize: 20,
+    color: '#ffffff',
+    fontWeight: 'bold',
   },
   container: {
     flex: 1,
@@ -366,7 +370,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   formContainer: {
-    backgroundColor: color.greenlight,
+    backgroundColor: '#019468',
     padding: 20,
     margin: 20,
     borderRadius: 25,
@@ -384,16 +388,12 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
   },
   currentDate: {
-    backgroundColor: color.greendark,
-    borderRadius: 19,
     paddingLeft: 39,
     paddingRight: 39,
-    paddingTop: 9,
-    paddingBottom: 9,
-    marginBottom: 8,
+    marginBottom: 18,
   },
   currentDateText: {
-    color: '#6AFCC3',
+    color: '#FFFFFF',
     textAlign: 'center',
     fontSize: 18,
     fontWeight: 'bold',
@@ -430,19 +430,19 @@ const styles = StyleSheet.create({
     paddingBottom: 14,
     paddingRight: 20,
     paddingLeft: 20,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: color.primary,
     borderRadius: 13,
     fontFamily: 'RobotoMono_400Regular',
+    color: '#ffffff',
   },
   predictButton: {
     marginTop: 8,
-    color: '#FFFFFF',
     borderRadius: 22,
     paddingTop: 8,
     paddingBottom: 8,
   },
   predictButtonText: {
-    color: '#FFFFFF',
+    color: color.primary,
     textAlign: 'center',
     fontSize: 18,
     fontFamily: 'RobotoMono_400Regular',

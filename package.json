@@ -11,7 +11,8 @@
     "build:ios": "eas build -p ios",
     "eject": "expo eject",
     "predeploy": "expo build:web",
-    "deploy-hosting": "yarn run predeploy && firebase deploy --only hosting"
+    "deploy-hosting": "yarn run predeploy && firebase deploy --only hosting",
+    "reset-simulator": "xcrun simctl erase all"
   },
   "dependencies": {
     "@expo-google-fonts/inter": "^0.2.2",
@@ -25,6 +26,7 @@
     "expo-linking": "~3.3.0",
     "expo-splash-screen": "~0.17.5",
     "expo-status-bar": "~1.4.2",
+    "expo-system-ui": "~2.0.1",
     "expo-updates": "~0.15.6",
     "prop-types": "^15.8.1",
     "react": "18.1.0",

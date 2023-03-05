@@ -17,6 +17,8 @@ import getFormattedNumber from '../utils/getFormattedNumber';
 import isTodayABusinessDay from '../utils/isTodayABusinessDay';
 import TRCData from '../data/trc.json';
 
+import { color } from '../ui';
+
 function Prediction({ route, navigation }) {
   const [predictionList, setPredictionList] = useState([]);
   const [inputBankName, setInputBankName] = useState('');
@@ -184,10 +186,10 @@ function Prediction({ route, navigation }) {
   }
 
   return (
-    <View style={{ flex: 1, backgroundColor: '#006C4B' }}>
+    <View style={{ flex: 1, backgroundColor: color.dark }}>
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <SafeAreaView
-          style={[styles.container, { backgroundColor: '#006C4B' }]}
+          style={[styles.container, { backgroundColor: color.dark }]}
           onLayout={onLayoutRootView}
         >
           <PredictionLogo width={44} height={65.6} />
@@ -252,7 +254,7 @@ function Prediction({ route, navigation }) {
             </View>
             {predictionList.length === 0 && (
               <View style={{ padding: 12, fontSize: 16 }}>
-                <Text style={{ fontSize: 16, textAlign: 'center' }}>
+                <Text style={{ fontSize: 16, textAlign: 'center', color: '#FFFFFF' }}>
                   ¡Genial! No encontramos restricciones, límites o comisiones
                   para una transferencia al enviar {inputBankQuantity} de{' '}
                   {inputBankName} a {outputBankName}.
@@ -289,15 +291,16 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 8,
     fontSize: 20,
+    color: '#FFFFFF',
   },
   container: {
     flex: 1,
-    backgroundColor: '#CFE8D9',
+    backgroundColor: '#019468',
     alignItems: 'center',
     paddingTop: 40,
   },
   formContainer: {
-    backgroundColor: '#CFE8D9',
+    backgroundColor: '#019468',
     padding: 20,
     margin: 20,
     borderRadius: 25,

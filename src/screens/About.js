@@ -18,6 +18,8 @@ import * as Linking from 'expo-linking';
 
 import FormLogo from '../../assets/FormLogo';
 
+import { color } from '../ui';
+
 function About({ navigation }) {
   const [appIsReady, setAppIsReady] = useState(false);
 
@@ -71,10 +73,10 @@ function About({ navigation }) {
   };
 
   return (
-    <View style={{ flex: 1, backgroundColor: '#006C4B' }}>
+    <View style={{ flex: 1, backgroundColor: color.dark }}>
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <SafeAreaView
-          style={[styles.container, { backgroundColor: '#006C4B' }]}
+          style={[styles.container, { backgroundColor: color.dark }]}
           onLayout={onLayoutRootView}
         >
           <FormLogo width={44} height={65.6} />
@@ -100,7 +102,7 @@ function About({ navigation }) {
               accesibilityLabel="Tutorial de uso"
               style={({ pressed }) => [
                 styles.secondaryButton,
-                { backgroundColor: pressed ? '#C7F1E4' : '#FFFFFF' },
+                { backgroundColor: pressed ? '#C7F1E4' : color.dark },
               ]}
             >
               <Text style={styles.secondaryButtonText}>Tutorial de uso</Text>
@@ -114,7 +116,7 @@ function About({ navigation }) {
               accesibilityLabel="Reportar un problema"
               style={({ pressed }) => [
                 styles.secondaryButton,
-                { backgroundColor: pressed ? '#C7F1E4' : '#FFFFFF' },
+                { backgroundColor: pressed ? '#C7F1E4' : color.dark },
               ]}
             >
               <Text style={styles.secondaryButtonText}>
@@ -130,7 +132,7 @@ function About({ navigation }) {
               accesibilityLabel="Código fuente"
               style={({ pressed }) => [
                 styles.secondaryButton,
-                { backgroundColor: pressed ? '#C7F1E4' : '#FFFFFF' },
+                { backgroundColor: pressed ? '#C7F1E4' : color.dark },
               ]}
             >
               <Text style={styles.secondaryButtonText}>Código fuente</Text>
@@ -142,7 +144,7 @@ function About({ navigation }) {
               accesibilityLabel="Volver"
               style={({ pressed }) => [
                 styles.predictButton,
-                { backgroundColor: pressed ? '#00442F' : '#006C4B' },
+                { backgroundColor: pressed ? '#CFE8D9' : '#FFFFFF' },
               ]}
             >
               <Text style={styles.predictButtonText}>Volver</Text>
@@ -163,13 +165,15 @@ const styles = StyleSheet.create({
   titlePage: {
     fontSize: 20,
     marginBottom: 10,
+    color: '#FFFFFF',
   },
   paragraphPage: {
     fontSize: 16,
     marginBottom: 8,
+    color: '#FFFFFF',
   },
   scrollViewContainer: {
-    backgroundColor: '#006C4B',
+    backgroundColor: color.primary,
   },
   container: {
     flex: 1,
@@ -178,7 +182,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   pageContainer: {
-    backgroundColor: '#CFE8D9',
+    backgroundColor: color.primary,
     padding: 20,
     margin: 20,
     borderRadius: 25,
@@ -187,26 +191,24 @@ const styles = StyleSheet.create({
   },
   secondaryButton: {
     marginTop: 8,
-    color: '#006C4B',
     borderRadius: 22,
     paddingTop: 8,
     paddingBottom: 8,
   },
   secondaryButtonText: {
-    color: '#006C4B',
+    color: '#ffffff',
     textAlign: 'center',
     fontSize: 18,
     fontFamily: 'RobotoMono_400Regular',
   },
   predictButton: {
     marginTop: 8,
-    color: '#FFFFFF',
     borderRadius: 22,
     paddingTop: 8,
     paddingBottom: 8,
   },
   predictButtonText: {
-    color: '#FFFFFF',
+    color: color.primary,
     textAlign: 'center',
     fontSize: 18,
     fontFamily: 'RobotoMono_400Regular',

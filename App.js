@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
+import { useColorScheme } from 'react-native';
 
 import Form from './src/screens/Form';
 import Prediction from './src/screens/Prediction';
@@ -11,6 +12,7 @@ import About from './src/screens/About';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+  let colorScheme = useColorScheme();
   return (
     <SafeAreaProvider>
       <NavigationContainer>
@@ -25,7 +27,7 @@ export default function App() {
       </NavigationContainer>
       <StatusBar
         backgroundColor="#006C4B"
-        style="light"
+        style={colorScheme === 'dark' ? 'light' : 'dark'}
         barStyle="dark-content"
       />
     </SafeAreaProvider>
