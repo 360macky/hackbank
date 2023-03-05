@@ -241,7 +241,7 @@ function Form({ navigation }) {
               keyboardType="numeric"
               placeholder="S/ 000.00"
               textAlign={'right'}
-              placeholderTextColor={'#ffffff'}
+              placeholderTextColor={'#CFE8D9'}
               accessible
               accesibilityLabel="Ingresar monto de dinero"
             />
